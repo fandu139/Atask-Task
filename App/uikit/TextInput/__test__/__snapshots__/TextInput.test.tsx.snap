@@ -1,0 +1,538 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput component test TextInput inverted snapshot test should render correctly 1`] = `
+<View
+  style={{}}
+>
+  <View
+    onResponderRelease={[Function]}
+    onStartShouldSetResponder={[Function]}
+    pointerEvents="auto"
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+          "height": 52,
+          "paddingBottom": 10,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+        }
+      }
+    >
+      <View
+        pointerEvents="none"
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            {
+              "borderColor": "rgba(255, 255, 255, 1)",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "bottom": 0,
+              "left": -1.5,
+              "position": "absolute",
+              "right": -1.5,
+              "top": -1.5,
+            }
+          }
+        />
+      </View>
+      <View
+        pointerEvents="auto"
+        style={
+          {
+            "alignSelf": "stretch",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            {
+              "left": "-100%",
+              "paddingLeft": "50%",
+              "position": "absolute",
+              "top": 0,
+              "transform": [
+                {
+                  "scale": 0.75,
+                },
+                {
+                  "translateY": 0,
+                },
+                {
+                  "translateX": 0,
+                },
+              ],
+              "width": "200%",
+            }
+          }
+        >
+          <Text
+            collapsable={false}
+            numberOfLines={1}
+            style={
+              {
+                "color": "rgba(255, 255, 255, 1)",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 16,
+                "textAlign": "left",
+                "textAlignVertical": "top",
+              }
+            }
+          >
+            Label TextInput
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <TextInput
+            accessibilityLabel="text-input-default"
+            allowFontScaling={false}
+            autoCapitalize="sentences"
+            disableFullscreenUI={true}
+            editable={true}
+            maxLength={255}
+            multiline={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onChangeText={[Function]}
+            onContentSizeChange={[Function]}
+            onFocus={[Function]}
+            secureTextEntry={false}
+            selectionColor="#FFFFFF"
+            style={
+              [
+                {
+                  "flex": 1,
+                  "includeFontPadding": false,
+                  "margin": 0,
+                  "padding": 0,
+                  "paddingTop": 0,
+                  "textAlign": "left",
+                  "textAlignVertical": "top",
+                  "top": 2,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "fontSize": 16,
+                  "height": 24,
+                },
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ],
+              ]
+            }
+            testID="text-input-default"
+            underlineColorAndroid="transparent"
+            value="Value TextInput"
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+          },
+          {
+            "minHeight": 8,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`TextInput component test TextInput snapshot test should render correctly 1`] = `
+<View
+  style={{}}
+>
+  <View
+    onResponderRelease={[Function]}
+    onStartShouldSetResponder={[Function]}
+    pointerEvents="auto"
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+          "height": 52,
+          "paddingBottom": 10,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+        }
+      }
+    >
+      <View
+        pointerEvents="none"
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            {
+              "borderColor": "rgba(32, 32, 32, 1)",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "bottom": 0,
+              "left": -1.5,
+              "position": "absolute",
+              "right": -1.5,
+              "top": -1.5,
+            }
+          }
+        />
+      </View>
+      <View
+        pointerEvents="auto"
+        style={
+          {
+            "alignSelf": "stretch",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            {
+              "left": "-100%",
+              "paddingLeft": "50%",
+              "position": "absolute",
+              "top": 0,
+              "transform": [
+                {
+                  "scale": 0.75,
+                },
+                {
+                  "translateY": 0,
+                },
+                {
+                  "translateX": 0,
+                },
+              ],
+              "width": "200%",
+            }
+          }
+        >
+          <Text
+            collapsable={false}
+            numberOfLines={1}
+            style={
+              {
+                "color": "rgba(32, 32, 32, 1)",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 16,
+                "textAlign": "left",
+                "textAlignVertical": "top",
+              }
+            }
+          >
+            Label TextInput
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <TextInput
+            accessibilityLabel="text-input-default"
+            allowFontScaling={false}
+            autoCapitalize="sentences"
+            disableFullscreenUI={true}
+            editable={true}
+            maxLength={255}
+            multiline={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onChangeText={[Function]}
+            onContentSizeChange={[Function]}
+            onFocus={[Function]}
+            secureTextEntry={false}
+            selectionColor="#ADADAD"
+            style={
+              [
+                {
+                  "flex": 1,
+                  "includeFontPadding": false,
+                  "margin": 0,
+                  "padding": 0,
+                  "paddingTop": 0,
+                  "textAlign": "left",
+                  "textAlignVertical": "top",
+                  "top": 2,
+                },
+                {
+                  "color": "#202020",
+                  "fontSize": 16,
+                  "height": 24,
+                },
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ],
+              ]
+            }
+            testID="text-input-default"
+            underlineColorAndroid="transparent"
+            value="Value TextInput"
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+          },
+          {
+            "minHeight": 8,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`TextInput component test TextInput with custom color snapshot test should render correctly 1`] = `
+<View
+  style={{}}
+>
+  <View
+    onResponderRelease={[Function]}
+    onStartShouldSetResponder={[Function]}
+    pointerEvents="auto"
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+          "height": 52,
+          "paddingBottom": 10,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+        }
+      }
+    >
+      <View
+        pointerEvents="none"
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            {
+              "borderColor": "rgba(255, 255, 255, 1)",
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "bottom": 0,
+              "left": -1.5,
+              "position": "absolute",
+              "right": -1.5,
+              "top": -1.5,
+            }
+          }
+        />
+      </View>
+      <View
+        pointerEvents="auto"
+        style={
+          {
+            "alignSelf": "stretch",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            {
+              "left": "-100%",
+              "paddingLeft": "50%",
+              "position": "absolute",
+              "top": 0,
+              "transform": [
+                {
+                  "scale": 0.75,
+                },
+                {
+                  "translateY": 0,
+                },
+                {
+                  "translateX": 0,
+                },
+              ],
+              "width": "200%",
+            }
+          }
+        >
+          <Text
+            collapsable={false}
+            numberOfLines={1}
+            style={
+              {
+                "color": "rgba(255, 255, 255, 1)",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "includeFontPadding": false,
+                "lineHeight": 16,
+                "textAlign": "left",
+                "textAlignVertical": "top",
+              }
+            }
+          >
+            Label TextInput
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <TextInput
+            accessibilityLabel="text-input-default"
+            allowFontScaling={false}
+            autoCapitalize="sentences"
+            disableFullscreenUI={true}
+            editable={true}
+            maxLength={255}
+            multiline={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onChangeText={[Function]}
+            onContentSizeChange={[Function]}
+            onFocus={[Function]}
+            secureTextEntry={false}
+            selectionColor="gray"
+            style={
+              [
+                {
+                  "flex": 1,
+                  "includeFontPadding": false,
+                  "margin": 0,
+                  "padding": 0,
+                  "paddingTop": 0,
+                  "textAlign": "left",
+                  "textAlignVertical": "top",
+                  "top": 2,
+                },
+                {
+                  "color": "black",
+                  "fontSize": 16,
+                  "height": 24,
+                },
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ],
+              ]
+            }
+            testID="text-input-default"
+            underlineColorAndroid="transparent"
+            value="Value TextInput"
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+          },
+          {
+            "minHeight": 8,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;

@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Menu List component test snapshot test should render correctly 1`] = `
+<View
+  accessibilityLabel="button-menu-list-default"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingTop": 20,
+    }
+  }
+  testID="button-menu-list-default"
+>
+  <View
+    style={
+      [
+        {
+          "flexDirection": "row",
+        },
+        false,
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 15,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View>
+            <Text
+              accessibilityLabel="title-button-menu-list-default"
+              allowFontScaling={false}
+              style={
+                [
+                  {
+                    "color": "#202020",
+                    "fontSize": 14,
+                    "fontWeight": "normal",
+                  },
+                  {},
+                  undefined,
+                  undefined,
+                ]
+              }
+              testID="title-button-menu-list-default"
+            >
+              Test Button Menu List
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <View
+            accessibilityLabel="button-icon"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": true,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            hitSlop={
+              {
+                "bottom": 15,
+                "left": 15,
+                "right": 15,
+                "top": 15,
+              }
+            }
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+            testID="button-icon"
+          >
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 12,
+                  },
+                  {
+                    "color": "#47bba5",
+                    "marginLeft": 15,
+                  },
+                  {
+                    "fontFamily": "Icon",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "backgroundColor": "#E0E0E0",
+        "height": 1,
+      }
+    }
+  />
+</View>
+`;

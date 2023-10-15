@@ -5,98 +5,76 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+import React, {useRef, useState} from 'react';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {NavigationState} from '@react-navigation/core';
+import {navigationRef} from './App/helper/navigation';
+import AuthContext from './App/context/Auth';
+import AppSplashScreen from './App/screens/Splash';
+import RootNavigator from './App/navigation/RootNavigator';
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  const routeNameRef = useRef<string>();
+  const [showSplashScreen, setIsShowSplashScreen] = useState(true);
+  const [accountData, setAccountData] = useState([]);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsShowSplashScreen(false);
+    }, 5000);
+  }, []);
+
+  if (showSplashScreen) {
+    return <AppSplashScreen />;
+  }
+
+  // Gets the current screen from navigation state
+  // @ts-ignore
+  const getActiveRoute = (state: NavigationState) => {
+    const route = state.routes[state.index];
+
+    if (route.state) {
+      // Dive into nested navigators
+      return getActiveRoute(route.state as NavigationState);
+    }
+
+    return route;
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+    <AuthContext.Provider
+      value={{
+        accountData,
+        setAccountData,
+        isAuthenticated,
+        setIsAuthenticated,
+      }}>
+      <SafeAreaView style={styles.container}>
+        <NavigationContainer
+          ref={navigationRef}
+          onReady={() => {
+            routeNameRef.current =
+              navigationRef?.current?.getCurrentRoute()?.name;
+          }}
+          onStateChange={state => {
+            const {name: currentRouteName} = getActiveRoute(
+              state as NavigationState,
+            );
+            routeNameRef.current = currentRouteName;
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+          <RootNavigator />
+        </NavigationContainer>
+      </SafeAreaView>
+    </AuthContext.Provider>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
