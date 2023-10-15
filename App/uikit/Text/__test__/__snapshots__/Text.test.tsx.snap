@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component test Text Black snapshot test should render correctly 1`] = `
+<Text
+  allowFontScaling={false}
+  error={true}
+  link={true}
+  style={
+    [
+      {
+        "color": "#202020",
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+      {
+        "color": "#00A2D8",
+      },
+      {
+        "color": "#EF4941",
+      },
+    ]
+  }
+>
+  Test Text
+</Text>
+`;
+
+exports[`Text component test Text Bold snapshot test should render correctly 1`] = `
+<Text
+  allowFontScaling={false}
+  error={true}
+  link={true}
+  style={
+    [
+      {
+        "color": "#202020",
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+      {
+        "color": "#00A2D8",
+      },
+      {
+        "color": "#EF4941",
+      },
+    ]
+  }
+>
+  Test Text
+</Text>
+`;
+
+exports[`Text component test Text Currency snapshot test should render correctly 1`] = `
+<Text
+  allowFontScaling={false}
+  error={true}
+  link={true}
+  style={
+    [
+      {
+        "color": "#202020",
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+      {
+        "color": "#00A2D8",
+      },
+      {
+        "color": "#EF4941",
+      },
+    ]
+  }
+>
+  Rp 0
+</Text>
+`;
+
+exports[`Text component test Text Medium snapshot test should render correctly 1`] = `
+<Text
+  allowFontScaling={false}
+  error={true}
+  link={true}
+  style={
+    [
+      {
+        "color": "#202020",
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      undefined,
+      {
+        "color": "#00A2D8",
+      },
+      {
+        "color": "#EF4941",
+      },
+    ]
+  }
+>
+  Test Text
+</Text>
+`;
+
+exports[`Text component test Text snapshot test should render correctly 1`] = `
+<Text
+  allowFontScaling={false}
+  error={true}
+  link={true}
+  style={
+    [
+      {
+        "color": "#202020",
+        "fontSize": 14,
+        "fontWeight": "normal",
+      },
+      {},
+      {
+        "color": "#00A2D8",
+      },
+      {
+        "color": "#EF4941",
+      },
+    ]
+  }
+>
+  Test Text
+</Text>
+`;

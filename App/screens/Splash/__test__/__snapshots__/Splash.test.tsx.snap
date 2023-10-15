@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`splash screen test snapshot test should render correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#d4f6f3",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "overflow": "hidden",
+        },
+        {
+          "height": 200,
+          "width": 200,
+        },
+      ]
+    }
+  >
+    <FastImageView
+      defaultSource={null}
+      resizeMode="contain"
+      source={
+        {
+          "testUri": "../../../App/assets/images/surplus_logo.png",
+        }
+      }
+      style={
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
+  <Text
+    style={
+      {
+        "textAlign": "center",
+        "width": 250,
+      }
+    }
+  >
+    Membantu dan mendukung masyarakat dalam memahami dan menerapkan pola produksi dan konsumsi pangan yang selaras dengan keberlanjutan sosial dan lingkungan
+  </Text>
+  <View
+    style={
+      {
+        "bottom": 100,
+        "position": "absolute",
+      }
+    }
+  >
+    <ActivityIndicator
+      accessibilityLabel="loading-indicator"
+      color="#47bba5"
+      size="large"
+      testID="loading-indicator"
+    />
+  </View>
+</View>
+`;
