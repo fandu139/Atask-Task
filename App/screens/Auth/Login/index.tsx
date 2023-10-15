@@ -123,7 +123,7 @@ const LoginScreen: React.FC = () => {
         setIsAuthenticated(false);
       }
     } else {
-      Alert.alert('Error', 'User not found');
+      Alert.alert('Error', 'User not found please register account');
     }
   };
 
