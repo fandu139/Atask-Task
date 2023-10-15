@@ -18,7 +18,7 @@ import AuthContext from '../../../context/Auth';
 import Colors from '../../../theme/colors';
 import {ICON_HIDE_PASSWORD, ICON_SHOW_PASSWORD} from '../../../assets/icon';
 import {ATASK_LOGO} from '../../../assets/images';
-import ReactNativeBiometrics, {BiometryTypes} from 'react-native-biometrics';
+import RNBiometrics from 'react-native-simple-biometrics';
 
 const LoginScreen: React.FC = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -26,30 +26,6 @@ const LoginScreen: React.FC = () => {
     React.useContext(AuthContext);
   const [errorMessageAfterSubmit, setErrorMessageAfterSubmit] =
     React.useState('');
-
-  useEffect(() => {
-    const checkSensor = () => {
-      const rnBiometrics = new ReactNativeBiometrics();
-      rnBiometrics.isSensorAvailable().then(resultObject => {
-        const {available, biometryType} = resultObject;
-
-        if (available && biometryType === BiometryTypes.TouchID) {
-          Alert.alert('Informasi', 'TouchID is supported');
-        } else if (available && biometryType === BiometryTypes.FaceID) {
-          Alert.alert('Informasi', 'FaceID is supported');
-        } else if (available && biometryType === BiometryTypes.Biometrics) {
-          console.log('Biometrics is supported');
-          Alert.alert('Informasi', 'Biometrics is supported');
-        } else {
-          Alert.alert(
-            'Informasi',
-            'Biometrics not supported, check or activate your biometric',
-          );
-        }
-      });
-    };
-    checkSensor();
-  }, []);
 
   useEffect(() => {
     const isCheckData = async () => {
@@ -136,29 +112,16 @@ const LoginScreen: React.FC = () => {
   const onSubmitLoginByBiometric = async () => {
     const getNewAccount = await getNewUserRegisted();
     if (getNewAccount) {
-      let payload = 'fandu';
-      const rnBiometrics = new ReactNativeBiometrics();
-      rnBiometrics
-        .createSignature({
-          promptMessage: 'Sign in',
-          payload: payload,
-        })
-        .then(resultObject => {
-          const {success, signature} = resultObject;
-
-          if (success) {
-            console.log(signature);
-            onSubmitLogin({
-              email: getNewAccount[0].email,
-              password: getNewAccount[0].password,
-            });
-          }
-        })
-        .catch(e => {
-          Alert.alert('Error', `${e}`);
-
-          console.log('biometrics failed');
+      try {
+        await RNBiometrics.requestBioAuth('Security', 'Authenticate to View');
+        onSubmitLogin({
+          email: getNewAccount[0].email,
+          password: getNewAccount[0].password,
         });
+      } catch (err) {
+        console.log(err);
+        setIsAuthenticated(false);
+      }
     } else {
       Alert.alert('Error', 'User not found');
     }
