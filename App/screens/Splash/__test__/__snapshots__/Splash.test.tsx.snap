@@ -29,7 +29,7 @@ exports[`splash screen test snapshot test should render correctly 1`] = `
       resizeMode="contain"
       source={
         {
-          "testUri": "../../../App/assets/images/surplus_logo.png",
+          "testUri": "../../../App/assets/images/atask_logo.png",
         }
       }
       style={
@@ -43,16 +43,6 @@ exports[`splash screen test snapshot test should render correctly 1`] = `
       }
     />
   </View>
-  <Text
-    style={
-      {
-        "textAlign": "center",
-        "width": 250,
-      }
-    }
-  >
-    Membantu dan mendukung masyarakat dalam memahami dan menerapkan pola produksi dan konsumsi pangan yang selaras dengan keberlanjutan sosial dan lingkungan
-  </Text>
   <View
     style={
       {
